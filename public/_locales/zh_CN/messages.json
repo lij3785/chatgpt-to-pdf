@@ -1,0 +1,58 @@
+{
+    "appName": {
+      "message": "ChatGPT 转 PDF"
+    },
+    "appDesc": {
+      "message": "轻松将 ChatGPT 对话导出为 PDF 文件"
+    },
+    "saveAsPDF": {
+      "message": "另存为 PDF"
+    },
+    "selectMessagesToSave": {
+      "message": "选择要保存的消息"
+    },
+    "generating": {
+      "message": "生成中..."
+    },
+    "dark": {
+      "message": "深色"
+    },
+    "light": {
+      "message": "浅色"
+    },
+    "selectedMessages": {
+      "message": "已选择 $count$ 条消息",
+      "placeholders": {
+        "count": {
+          "content": "$1"
+        }
+      }
+    },
+    "exportConfirmation": {
+      "message": "导出确认"
+    },
+    "selectedMessagesCount": {
+      "message": "你选择了 $1 条消息，是否确认导出？"
+    },
+    "cancel": {
+      "message": "取消"
+    },
+    "export": {
+      "message": "导出"
+    },
+    "selectAll": {
+      "message": "全选"
+    },
+    "exportOptions": {
+      "message": "导出选项"
+    },
+    "saveAllAsPDF": {
+      "message": "保存全部对话为 PDF"
+    },
+    "selectToSave": {
+      "message": "选择要保存的消息"
+    },
+    "saveSelectedAsPDF": {
+      "message": "保存所选为 PDF"
+    }
+  }
