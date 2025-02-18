@@ -58,16 +58,28 @@ export const useMessages = () => {
 
   // 选择所有消息
   const selectAll = useCallback(() => {
-    const messageIds = messages.map(msg => msg.id);
-    if (messageIds.length === 0) {
-      // 如果没有消息，重新初始化并获取
-      const currentMessages = initMessages();
-      const newMessageIds = currentMessages.map(msg => msg.id);
-      setSelectedMessages(newMessageIds);
+    // 先初始化消息列表
+    const currentMessages = initMessages();
+    
+    if (currentMessages.length === 0) {
+      console.log('正在重新扫描消息...');
+      // 强制重新扫描 DOM
+      const elements = document.querySelectorAll('[data-message-id]');
+      const messageIds = Array.from(elements)
+        .map(element => element.getAttribute('data-message-id'))
+        .filter((id): id is string => id !== null);
+      
+      if (messageIds.length > 0) {
+        console.log(`找到 ${messageIds.length} 条消息`);
+        setSelectedMessages(messageIds);
+      } else {
+        console.warn('未找到任何消息');
+      }
     } else {
-      setSelectedMessages(messageIds);
+      console.log(`选择 ${currentMessages.length} 条消息`);
+      setSelectedMessages(currentMessages.map(msg => msg.id));
     }
-  }, [messages, initMessages]);
+  }, [initMessages]);
 
   // 切换消息选择状态
   const toggleMessage = useCallback((messageId: string) => {

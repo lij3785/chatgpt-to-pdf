@@ -1,0 +1,58 @@
+{
+  "appName": {
+    "message": "ChatGPT to PDF"
+  },
+  "appDesc": {
+    "message": "Export ChatGPT conversations to PDF easily"
+  },
+  "saveAsPDF": {
+    "message": "Save as PDF"
+  },
+  "selectMessagesToSave": {
+    "message": "Select Messages To Save"
+  },
+  "selectedMessages": {
+    "message": "$count$ messages selected",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "exportConfirmation": {
+    "message": "Export Confirmation"
+  },
+  "selectedMessagesCount": {
+    "message": "You have selected $1 messages. Proceed with export?"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "export": {
+    "message": "Export"
+  },
+  "generating": {
+    "message": "Generating..."
+  },
+  "dark": {
+    "message": "Dark"
+  },
+  "light": {
+    "message": "Light"
+  },
+  "selectAll": {
+    "message": "Select All"
+  },
+  "exportOptions": {
+    "message": "Export Options"
+  },
+  "saveAllAsPDF": {
+    "message": "Save All as PDF"
+  },
+  "selectToSave": {
+    "message": "Select Messages to Save"
+  },
+  "saveSelectedAsPDF": {
+    "message": "Save Selected as PDF"
+  }
+}

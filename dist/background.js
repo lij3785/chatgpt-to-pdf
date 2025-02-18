@@ -1,0 +1,1 @@
+(function(){"use strict";(function(){chrome.runtime.onInstalled.addListener(()=>{console.log("扩展已安装")}),chrome.runtime.onMessage.addListener((e,r,n)=>{if(e.type==="download_pdf")return chrome.downloads.download({url:e.url,filename:e.filename,saveAs:!0},o=>{n({success:!0,downloadId:o})}),!0})})()})();

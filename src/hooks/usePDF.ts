@@ -24,9 +24,22 @@ export const usePDF = () => {
       return;
     }
 
+    // 检查并重新获取消息
     if (selectedMessageIds.length === 0) {
-      console.warn('没有选择任何消息');
-      return;
+      console.log('尝试重新获取消息...');
+      const elements = document.querySelectorAll('[data-message-id]');
+      const messageIds = Array.from(elements)
+        .map(element => element.getAttribute('data-message-id'))
+        .filter((id): id is string => id !== null);
+
+      if (messageIds.length > 0) {
+        console.log(`找到 ${messageIds.length} 条消息，开始生成 PDF`);
+        selectedMessageIds = messageIds;
+      } else {
+        console.warn('没有找到任何消息');
+        setError('未找到可导出的消息');
+        return;
+      }
     }
 
     if (retryCount >= 3) {
